@@ -1,0 +1,39 @@
+<div class="chat-room">
+  <div class="mb-3">
+    <%= link_to new_room_path, class: "btn btn-success new_chat" do %>
+      New Chat
+    <%end%>
+  </div>
+  <div class="all-rooms">
+    <table class="table table-hover table-striped">
+      <%if @rooms.present?%>
+        <tbody>
+          <%@rooms.each do |room|%>
+            <tr class="room">
+              <td>
+              <%= link_to room_path(room), style: "text-decoration: none;" do %>
+                <img src="https://gravatar.com/avatar/cb86d4776fd81deb8e32db8b9e2eb33a.png" width="30px" height="30px">
+                <%= room.name%>
+              <%end%>
+              </td>
+            </tr>
+          <%end%>
+        </tbody>
+      <%else%>        
+          <tr><td>There are no rooms</td></tr>
+      <%end%>
+    </table>
+  </div>
+</div>
+
+
+<style type="text/css">
+  .all-rooms {
+  height: 90%;
+  width: 100%;
+  margin-left: 3%;
+}
+.new_chat {
+  margin-left: 3%;
+}
+</style>

@@ -1,0 +1,14 @@
+<div class="navbar navbar-expand-sm bg-success border-success justify-content-center">
+  <b id="justtalk">JUSTALK</b>
+  <div class="active pull-right" id="user">
+  <%if current_user.present? %>
+    <%= link_to destroy_user_session_path, method: :delete, data: {confirm: "are you sure?"} do %>
+      <i class="fa fa-sign-out"></i>
+    <%end%>
+  <%else%>
+    <%= link_to new_user_session_path do %>
+      <i class="fa fa-sign-in"></i>
+    <%end%>
+  <%end%>
+  </div>
+</div>
