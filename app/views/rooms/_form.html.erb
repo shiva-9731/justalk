@@ -1,6 +1,6 @@
-<div class="col-md-4">
+<div class="col-md-3">
 	<%= simple_form_for @room do |form| %>
-  <%= form.input :name , class: "form-control"%>
+  <%= form.input :name , class: "form-control", placeholder: "Chat Room Name"%>
   <%= form.submit "Save", class: 'btn btn-success' %>
 	<% end %>
 </div>

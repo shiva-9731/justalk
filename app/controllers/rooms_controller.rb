@@ -7,6 +7,10 @@ class RoomsController < ApplicationController
 
   def new
     @room = Room.new
+    respond_to do |format|
+      format.html 
+      format.js
+    end
   end
 
   def create

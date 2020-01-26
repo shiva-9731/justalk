@@ -1,8 +1,4 @@
 <div class="message-body">
-<h1>
-  <%= @room.name %>
-</h1>
-
 <div class="row">
   <div class="col-md-3">
     <%= render partial: 'rooms' %>
@@ -56,7 +52,7 @@
   <div class="chat-message-container">
     <div class="row no-gutters">
       <div class="col-auto text-center">
-        <img src="" class="avatar" alt="" data-role="user-avatar" width="30px" height="30x">
+        <img src="" class="avatar" alt="" data-role="user-avatar">
       </div>
 
       <div class="col">
@@ -79,8 +75,10 @@
 </div>
 <style type="text/css">
   .chat {
+    margin-top: 5%;
     overflow-y: scroll;
-    height: 250px;
+    overflow-x: none; 
+    height: 470px;
   }
   .message-body {
     height: 100px;
@@ -90,5 +88,10 @@
   }
   .move-name {
     margin-left: 50px;
+  }
+  img {
+    border-radius: 15px;
+    width: 30px;
+    height: 30px;
   }
 </style>

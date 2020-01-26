@@ -1,8 +1,10 @@
 <div class="chat-room">
   <div class="mb-3">
-    <%= link_to new_room_path, class: "btn btn-success new_chat" do %>
-      New Chat
-    <%end%>
+    <div id="new_form">
+      <%= link_to new_room_path , class: "btn btn-success",remote: true do %>
+        <b>NewChat</b>
+      <%end%>
+    </div>
   </div>
   <div class="all-rooms">
     <table class="table table-hover table-striped">
@@ -29,11 +31,16 @@
 
 <style type="text/css">
   .all-rooms {
-  height: 90%;
+  height: 500px;
   width: 100%;
   margin-left: 3%;
 }
-.new_chat {
-  margin-left: 3%;
+#new_form {
+  width: 95em;
+  padding-left: 3%;
+}
+
+.all-rooms {
+  overflow-y: scroll;
 }
 </style>
